@@ -76,6 +76,12 @@ export class UpdateSongDTO {
 
   @ApiProperty({ type: 'Date', description: '歌曲发行日期' })
   publishTime: Date;
+
+  @ApiProperty({ type: Number, description: '关联专辑id' })
+  albumId: number;
+
+  @ApiProperty({ type: 'array', items: { type: 'number' }, description: '关联歌手ids' })
+  singerIds: Array<number>;
 }
 
 export class Shelve_Album_SongDTO {

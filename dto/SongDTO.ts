@@ -26,12 +26,17 @@ export class NewSongDTO {
   @ApiProperty({ type: 'Date', description: '歌曲发行日期' })
   publishTime: Date;
 
-  @ApiProperty({ type: NewAlbumDTO, description: '专辑名' })
+  @ApiProperty({ type: NewAlbumDTO, description: '专辑名，上传文件获取返回值时有此项，用于添加新专辑' })
   album: NewAlbumDTO;
 
-  // 注意复杂类型要在swagger中正常显示需要在class头部引入 ApiExtraModel 关键字，并在当前属性下引入 getSchemaPath 关键字
-  @ApiProperty({ type: NewSingerDTO, description: '相关歌手' })
+  @ApiProperty({ type: NewSingerDTO, description: '相关歌手，上传文件获取返回值时有此项，用于添加新歌手' })
   singer: NewSingerDTO;
+
+  @ApiProperty({ type: Number, description: '关联专辑id，关联已有专辑，如果album存在则该albumId不执行' })
+  albumId: number;
+
+  @ApiProperty({ type: Number, description: '关联歌手id，关联已有歌手，如果singerId存在则该singerId不执行' })
+  singerId: number;
 }
 
 export class AudioFormatOption extends NewSongDTO {

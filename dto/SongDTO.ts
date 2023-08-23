@@ -110,3 +110,13 @@ export class Shelve_Singer_SongDTO {
   @ApiProperty({ type: Boolean, description: '关联或取关' })
   shelve: boolean;
 }
+
+export class Relation_Album_SongDTO extends LimitDTO {
+  @ApiProperty({ type: Number, description: '关联Song专辑id' })
+  albumId: number;
+}
+
+export class Relation_Singer_SongDTO extends LimitDTO {
+  @ApiProperty({ type: Number, description: '关联Song歌手id' })
+  singerId: number;
+}

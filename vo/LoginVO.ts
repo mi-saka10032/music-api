@@ -31,3 +31,11 @@ export class UserVO extends BaseVO {
   @ApiProperty({ description: '状态 0：不可用，1：正常' })
   status: number;
 }
+
+export class Captcha {
+  @ApiProperty({ type: String, example: 'midway-VC', description: '验证码id' })
+  id: string;
+
+  @ApiProperty({ type: String, example: 'base64', description: 'base64-svg' })
+  imageBase64: string;
+}

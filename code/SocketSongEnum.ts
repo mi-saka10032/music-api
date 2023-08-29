@@ -3,7 +3,7 @@ export enum SocketSongEnum {
   Start,
   BasicAnalysis,
   OSS,
-  DetailAnalysis
+  DetailAnalysis,
 }
 
 export interface SocketSongResponse {
@@ -12,8 +12,8 @@ export interface SocketSongResponse {
 }
 
 export const SocketSongText = {
-  0: "上传完成，解析开始",
-  1: "基础信息解析完成",
-  2: "OSS上传完成",
-  3: "详细信息解析完成"
+  0: '上传完成，解析开始',
+  1: '基础信息解析完成',
+  2: 'OSS上传完成',
+  3: '详细信息解析完成',
 };

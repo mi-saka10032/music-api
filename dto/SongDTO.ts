@@ -10,6 +10,14 @@ export interface AudioFile {
   mimeType: string;
 }
 
+export class OSSDTO {
+  @ApiProperty({ type: String, description: '文件名称' })
+  filename: string;
+
+  @ApiProperty({ type: String, description: 'OSS链接路径' })
+  ossPath: string;
+}
+
 export class NewSongDTO {
   @ApiProperty({ type: String, description: '歌曲名称' })
   songName: string;
